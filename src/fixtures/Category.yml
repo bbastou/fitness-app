@@ -1,0 +1,6 @@
+entity: Category
+items:
+  category0:
+    name: AMRAP B.1
+    programs:
+      - '@program0'

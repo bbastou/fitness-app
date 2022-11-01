@@ -1,0 +1,5 @@
+entity: Exercise
+items:
+  exercise0:
+    name: V-UP
+    repeat: 15

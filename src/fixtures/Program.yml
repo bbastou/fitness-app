@@ -1,0 +1,6 @@
+entity: Program
+items:
+  program0:
+    name: Part 1
+    exercises:
+      - '@exercise0'
