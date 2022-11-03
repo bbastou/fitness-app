@@ -1,8 +1,9 @@
 import { randomUUID } from 'crypto';
-import { setTimeout } from 'timers/promises';
 
 import { randomIntFromInterval } from './utils/random-number';
 import { convertMilisecondsDurationInSeconds } from './utils/convert-durations';
+
+const delay = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
 
 const ERROR_CODE = -1;
 
@@ -13,7 +14,7 @@ export const makeApiCalls = async (
 ): Promise<number[]> => {
   const randomIdentifierForVendor = randomUUID();
   const asyncProcessing = async (item: number) => {
-    await setTimeout(randomIntFromInterval(1, concurrency * 1_000));
+    await delay(randomIntFromInterval(1, concurrency * 1_000));
 
     const requestOptions = {
       headers: {
